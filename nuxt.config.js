@@ -13,15 +13,19 @@ module.exports = {
    ** Headers of the page
    */
   head: {
-
-
-    title: "Mobile App Development and Web Design Glasgow | Digital Design Glasgow | Screenmedia",
+    title:
+      'Mobile App Development and Web Design Glasgow | Digital Design Glasgow | Screenmedia',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Screenmedia is a BAFTA-award winning digital design practice working on the leading edge of multi-platform design and development.' },
+      {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Screenmedia is a BAFTA-award winning digital design practice working on the leading edge of multi-platform design and development.'
+      }
     ],
-    script: [{ src: 'https://cdn.polyfill.io/v2/polyfill.min.js' }],
+    script: [{ src: 'https://cdn.polyfill.io/v2/polyfill.min.js' }]
   },
 
   /*
@@ -66,7 +70,16 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config, { isDev }) {
+      if (isDev && process.client) {
+        config.module.rules.push({
+          enforce: 'pre',
+          test: /\.(js|vue)$/,
+          loader: 'eslint-loader',
+          exclude: /(node_modules)/
+        });
+      }
+    }
   },
   /*
    ** Generate configuration
@@ -89,8 +102,8 @@ module.exports = {
   },
 
   router: {
-    scrollBehavior: function (to, from, savedPosition) {
-      return { x: 0, y: 0 }
+    scrollBehavior: function(to, from, savedPosition) {
+      return { x: 0, y: 0 };
     }
   }
 };

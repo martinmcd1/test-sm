@@ -1,0 +1,48 @@
+.m-contactCTA {
+  background: #d7cdc2;
+  text-align: center;
+  padding: 90px 0 115px;
+
+  p {
+    @include font-size(1.6, 1.6);
+    font-weight: bold;
+    font-family: $f-AvantGarde;
+    color: $c-black;
+    margin-bottom: 25px;
+  }
+
+  h2 {
+    margin: 0 auto 30px;
+    max-width: 550px;
+  }
+
+  .btn {
+    margin: 0 auto;
+  }
+
+  @media (max-width: 400px) {
+    h2 {
+      @include font-size(3.0, 4.4);
+    }
+  }
+
+  @media (min-width: 400px) {
+    padding: 110px 0 135px;
+  }
+
+  @media (min-width: $screen-sm) {
+    padding: 130px 0 140px;
+
+    p {
+      @include font-size(1.8, 1.8);
+    }
+
+    h2 {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    padding: 150px 0 160px;
+  }
+}

@@ -1,0 +1,105 @@
+.m-carousel-7030text {
+  padding: 60px 0 100px;
+
+  .carousel {
+    margin-top: 60px;
+    overflow: hidden;
+
+    .slide-container {
+      display: flex;
+      flex: 0 0 100%;
+      overflow: scroll;
+      position: relative;
+      padding-left: 30px;
+
+      .slide {
+        padding-right: 30px;
+        flex: 0 0 300px;
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    padding: 100px 0 140px;
+
+    .carousel {
+      .slide-container {
+        .slide {
+          flex: 0 0 400px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    padding: 120px 0 160px;
+
+    .carousel {
+      margin-top: 80px;
+
+      .slide-container {
+        flex: 0 0 150%;
+        overflow: visible;
+
+        .slide {
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    padding: 140px 0 180px;
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 170px 0 240px;
+
+    .carousel {
+      margin-top: 120px;
+
+      .slide-container {
+        .slide {
+          flex: 0 0 566px;
+        }
+      }
+    }
+
+    .item-container {
+      display: flex;
+      margin: 0 -50px;
+    }
+
+    .left, .right {
+      padding-top: 55px;
+      border-top: 2px solid $c-black;
+      margin: 0 50px;
+    }
+
+    .left {
+      flex: 0 0 calc(35% - 100px);
+    }
+
+    .right {
+      flex: 0 0 calc(65% - 100px);
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .item-container {
+      margin: 0 -60px;
+    }
+
+    .left {
+      flex: 0 0 calc(37% - 120px);
+      margin: 0 60px;
+    }
+
+    .right {
+      flex: 0 0 calc(63% - 120px);
+
+      p {
+        margin-bottom: 40px;
+      }
+    }
+  }
+}

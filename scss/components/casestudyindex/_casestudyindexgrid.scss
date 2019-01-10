@@ -1,0 +1,81 @@
+.m-casestudyindexgrid {
+  .item-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    .item {
+      position: relative;
+      line-height: 0;
+
+      h3 {
+        position: absolute;
+        color: $c-white;
+        margin: 0;
+        padding: 0 30px;
+        bottom: 17px;
+      }
+    }
+  }
+
+  @media (min-width: 600px) {
+    .item-container {
+      .item {
+        flex: 0 0 50%;
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    .item-container {
+      .item {
+        flex: 0 0 33.333%;
+
+        h3 {
+          @include font-size(2.25, 3.64);
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    .item-container {
+      .item {
+        h3 {
+          @include font-size(2.75, 4.15);
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    .item-container {
+      .item {
+        h3 {
+          @include font-size(3.1, 4.5);
+          bottom: 27px;
+          padding: 0 40px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1600px) {
+    .item-container {
+      .item {
+        h3 {
+          @include font-size(3.45, 4.85);
+        }
+      }
+    }
+  }
+
+  @media (min-width: 1800px) {
+    .item-container {
+      .item {
+        h3 {
+          @include font-size(3.8, 4.4);
+        }
+      }
+    }
+  }
+}

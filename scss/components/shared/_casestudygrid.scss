@@ -1,0 +1,95 @@
+.m-casestudygrid {
+  padding: 100px 0;
+
+  .grid {
+    .grid-item {
+      position: relative;
+      border: none;
+      line-height: 0;
+      font-size: 0;
+      display: block;
+
+      h2 {
+        color: $c-white;
+        margin: 0;
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        padding: 0 25px;
+      }
+    }
+  }
+
+  .btn {
+    @include font-size(1.6, 2.2);
+    padding: 29px 53px 25px;
+    display: table;
+    margin: 35px auto 0;
+  }
+
+  @media (min-width: $screen-sm) {
+    padding: 120px 0;
+
+    .btn {
+      min-width: 300px;
+      margin: 65px auto 0;
+    }
+
+    .grid {
+      .grid-item {
+        h2 {
+          bottom: 50px;
+          padding-left: 70px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    padding: 150px 0;
+
+    .grid {
+      display: flex;
+      flex-wrap: wrap;
+
+      .grid-item {
+        flex: 0 0 50%;
+
+        h2 {
+          bottom: 15px;
+          padding-left: 30px;
+        }
+      }
+    }
+
+    .btn {
+      margin: 65px auto 0;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    padding: 180px 0;
+
+    .grid {
+      .grid-item {
+        h2 {
+          bottom: 30px;
+          padding-left: 50px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    padding: 210px 0;
+
+    .grid {
+      .grid-item {
+        h2 {
+          bottom: 50px;
+          padding-left: 70px;
+        }
+      }
+    }
+  }
+}

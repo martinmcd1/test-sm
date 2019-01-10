@@ -1,0 +1,14 @@
+.container {
+  @include clearfix();
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 8%;
+
+  @media (min-width: $screen-sm) {
+    padding: 0 10%;
+  }
+
+  @media (min-width: 1600px) {
+    padding: 0 11%;
+  }
+}

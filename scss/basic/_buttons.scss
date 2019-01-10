@@ -1,0 +1,42 @@
+.btn, button {
+  @include font-size(1.4, 2.0);
+  @include transition(all 0.2s ease-in-out);
+  border: 2px solid $c-white;
+  text-decoration: none;
+  padding: 16px 53px 12px;
+  box-sizing: border-box;
+  min-height: 52px;
+  min-width: 220px;
+  color: $c-white;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: $f-AvantGarde;
+  display: inline-block;
+  text-align: center;
+
+  &:hover {
+    color: $c-black;
+    background: $c-white;
+  }
+
+  &.solid-white {
+    background: $c-white;
+    color: $c-black;
+
+    &:hover {
+      background: transparent;
+      color: $c-white;
+    }
+  }
+
+  &.solid-black {
+    background: $c-black;
+    color: $c-white;
+    border-color: $c-black;
+
+    &:hover {
+      background: transparent;
+      color: $c-black;
+    }
+  }
+}

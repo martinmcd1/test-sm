@@ -1,0 +1,258 @@
+@-ms-viewport {
+  width: auto;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  -ms-overflow-style: auto !important;
+  position: relative;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include font-size(1.8, 3.0);
+  @include font-smoothing;
+  font-family: $f-ProximaNova;
+}
+
+img {
+  max-width: 100%;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-family: $f-AvantGarde;
+  font-weight: 600;
+  color: $c-black;
+  margin: 0 0 10px;
+}
+
+h1, .h1 {
+  @include font-size(4.4, 6.0);
+}
+
+h2, .h2 {
+  @include font-size(3.3, 4.7);
+}
+
+h3, .h3 {
+  @include font-size(2.25, 3.65);
+}
+
+h4, .h4 {
+  @include font-size(1.85, 3.25);
+}
+
+h5, .h5 {
+  @include font-size(1.6, 2.2);
+}
+
+p, ul, ol {
+  & + h1, & + h2, & + h3, & + h4, & + h5 {
+    margin-top: 40px;
+  }
+}
+
+p {
+  margin: 0 0 20px;
+  color: $c-greyish-brown;
+
+  &.preamble {
+    @include font-size(2.4, 3.2);
+    font-family: $f-Tisa;
+    font-weight: 200;
+    margin: 0 0 20px;
+  }
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 20px;
+
+  li {
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 5px;
+
+    &:before {
+      content:'';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 15px;
+      height: 2px;
+      background: $c-black;
+    }
+  }
+}
+
+ol {
+  list-style: decimal;
+  padding-left: 25px;
+  margin: 0 0 20px;
+}
+
+em {
+  font-style: italic;
+}
+
+@media (min-width: 400px) {
+  p {
+    &.preamble {
+      @include font-size(2.6, 3.4);
+    }
+  }
+
+  h1, .h1 {
+    @include font-size(4.8, 6.4);
+  }
+
+  h2, .h2 {
+    @include font-size(3.6, 5.0);
+  }
+
+  h3, .h3 {
+    @include font-size(2.4, 3.8);
+  }
+
+  h4, .h4 {
+    @include font-size(2.0, 3.2);
+  }
+}
+
+@media (min-width: $screen-sm) {
+  p {
+    &.preamble {
+      @include font-size(2.8, 4.0);
+    }
+  }
+
+  p, ul, ol {
+    & + h1, & + h2, & + h3, & + h4, & + h5 {
+      margin-top: 60px;
+    }
+  }
+
+  h1, .h1 {
+    @include font-size(5.2, 6.8);
+  }
+
+  h2, .h2 {
+    @include font-size(3.9, 5.3);
+  }
+
+  h3, .h3 {
+    @include font-size(2.75, 4.15);
+  }
+
+  h4, .h4 {
+    @include font-size(2.15, 3.35);
+  }
+}
+
+@media (min-width: $screen-md) {
+  body {
+    @include font-size(1.9, 3.1);
+  }
+
+  p {
+    &.preamble {
+      @include font-size(3.0, 4.2);
+    }
+  }
+
+  h1, .h1 {
+    @include font-size(5.6, 7.2);
+  }
+
+  h2, .h2 {
+    @include font-size(4.2, 5.6);
+  }
+
+  h3, .h3 {
+    @include font-size(3.1, 4.5);
+  }
+
+  h4, .h4 {
+    @include font-size(2.3, 3.5);
+  }
+
+  h5, .h5 {
+    @include font-size(1.7, 2.5);
+  }
+}
+
+@media (min-width: $screen-lg) {
+  p {
+    &.preamble {
+      @include font-size(3.2, 4.4);
+    }
+  }
+
+  h1, .h1 {
+    @include font-size(6.0, 7.6);
+  }
+
+  h2, .h2 {
+    @include font-size(4.5, 5.9);
+  }
+
+  h3, .h3 {
+    @include font-size(3.45, 4.85);
+  }
+
+  h4, .h4 {
+    @include font-size(2.45, 3.65);
+  }
+}
+
+@media (min-width: $screen-xl) {
+  body {
+    @include font-size(2.0, 3.2);
+  }
+
+  p {
+    &.preamble {
+      @include font-size(3.4, 4.6);
+    }
+  }
+
+  p, ul, ol {
+    & + h1, & + h2, & + h3, & + h4, & + h5 {
+      margin-top: 80px;
+    }
+  }
+
+  h1, .h1 {
+    @include font-size(6.6, 8.2);
+  }
+
+  h2, .h2 {
+    @include font-size(4.8, 6.4);
+  }
+
+  h3, .h3 {
+    @include font-size(3.8, 4.4);
+  }
+
+  h4, .h4 {
+    @include font-size(2.6, 3.8);
+  }
+
+  h5, .h5 {
+    @include font-size(1.8, 2.6);
+  }
+}

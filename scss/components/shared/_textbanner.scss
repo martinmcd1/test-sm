@@ -1,0 +1,35 @@
+.m-textbanner {
+  .text {
+    padding: 150px 0 50px;
+
+    h1 {
+      margin-bottom: 22px;
+    }
+  }
+
+  @media (min-width: 600px) {
+    .text {
+      padding: 170px 0 70px;
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    .text {
+      padding: 190px 0 90px;
+      width: 1031px;
+      max-width: 90%;
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    .text {
+      padding: 210px 0 110px;
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    .text {
+      padding: 230px 0 130px;
+    }
+  }
+}

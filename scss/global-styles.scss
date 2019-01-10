@@ -1,0 +1,16 @@
+// ONLY global styles should be imported here (no components)
+@import 'references/normalize.scss';
+@import 'references/typography.scss';
+@import 'references/variables.scss';
+@import 'references/mixins.scss';
+@import 'references/transitions.scss';
+
+@import 'basic/base.scss';
+@import 'basic/buttons.scss';
+@import 'basic/forms.scss';
+@import 'basic/links.scss';
+
+@import 'structure/layout.scss';
+@import 'structure/header.scss';
+@import 'structure/navigation.scss';
+@import 'structure/footer.scss';

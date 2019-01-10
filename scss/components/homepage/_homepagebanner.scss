@@ -1,0 +1,157 @@
+.m-homepagebanner {
+  height: 95vh;
+  min-height: 550px;
+  max-height: 1100px;
+  position: relative;
+  overflow: hidden;
+
+  .image {
+    img {
+      @include image-cover();
+    }
+  }
+
+  .text {
+    @include centre(both);
+    width: 100%;
+
+    h1 {
+      margin: 0;
+      color: $c-white;
+      @include font-size(4.6, 6.0);
+      text-align: center;
+    }
+  }
+
+  .client-solutions {
+    @include centre(x);
+    bottom: 0;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 20px;
+
+    &:before {
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      left: calc(8% - 0%);
+      width: calc(100% - 16%);
+      height: 2px;
+      background: #333333;
+    }
+
+    .container {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h5 {
+      color: $c-white;
+      margin: 0;
+      flex: 0 0 50%;
+      display: none;
+    }
+
+    ul {
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+      justify-content: space-between;
+      flex: 0 0 100%;
+
+      li {
+        margin: 0 0 0 30px;
+        padding: 0;
+
+        &:before {
+          display: none;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 360px) {
+    .text {
+      h1 {
+        @include font-size(5.6, 7.0);
+      }
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    .text {
+      h1 {
+        @include font-size(10.0, 12.0);
+      }
+    }
+
+    .client-solutions {
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      &:before {
+        left: calc(10% - 0%);
+        width: calc(100% - 20%);
+      }
+
+      ul {
+        li {
+          &:last-child {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    .client-solutions {
+      h5 {
+        display: block;
+      }
+
+      ul {
+        flex: 0 0 50%;
+
+        li {
+          margin: 0 0 0 50px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    .client-solutions {
+      &:before {
+        left: calc(11% - 0%);
+        width: calc(100% - 22%);
+      }
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    .text {
+      h1 {
+        @include font-size(12.0, 13.4);
+      }
+    }
+
+    .client-solutions {
+      &:before {
+        @include centre(x);
+        max-width: 1400px;
+      }
+    }
+  }
+}

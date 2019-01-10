@@ -1,0 +1,28 @@
+// Reference to SMACSS - http://smacss.com/
+//
+// NAMING CONVENTIONS:
+// c- : Color,
+// l- : Layout,
+// m- : Module,
+// f- : Form,
+// e- : Element,
+
+//BREAKPOINTS
+$screen-sm: 767px;
+$screen-md: 1050px;
+$screen-lg: 1250px;
+$screen-xl: 1450px;
+
+//FONTS
+$f-ProximaNova: 'proxima-nova', arial, sans-serif;
+$f-Tisa: 'ff-tisa-web-pro', serif;
+$f-AvantGarde: 'itc-avant-garde-gothic-pro', sans-serif;
+
+//COLOURS
+$c-white: #ffffff;
+$c-black: #121212;
+$c-very-light-brown: #ceaf8c;
+$c-greyish-brown: #4a4a4a;
+$c-powder-blue: #d1d8e0;
+$c-pale-grey: #eff0f2;
+$c-beige: #d7cdc2;

@@ -1,0 +1,153 @@
+.m-homepagetextbanner {
+  position: relative;
+  overflow: hidden;
+
+  h1 {
+    padding: 150px 0 calc(120px + 7vw);
+    @include font-size(2.0, 3.6);
+    margin: 0;
+  }
+
+  .client-solutions {
+    @include centre(x);
+    bottom: 0;
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 20px;
+
+    &:before {
+      content:'';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      left: calc(8% - 0%);
+      width: calc(100% - 16%);
+      height: 2px;
+      background: #e8e8e8;
+    }
+
+    .container {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    h5 {
+      color: $c-black;
+      margin: 0;
+      flex: 0 0 50%;
+      display: none;
+    }
+
+    ul {
+      margin: 0;
+      display: flex;
+      justify-content: flex-end;
+      justify-content: space-between;
+      flex: 0 0 100%;
+
+      li {
+        margin: 0 0 0 30px;
+        padding: 0;
+
+        &:before {
+          display: none;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          display: none;
+        }
+      }
+    }
+  }
+
+  @media (min-width: 450px) {
+    h1 {
+      @include font-size(2.4, 4.0);
+    }
+  }
+  @media (min-width: 600px) {
+    h1 {
+      padding: 170px 0 calc(140px + 7vw);
+    }
+  }
+
+  @media (min-width: $screen-sm) {
+    h1 {
+      @include font-size(3.1, 4.7);
+    }
+
+    .client-solutions {
+      padding-top: 30px;
+      padding-bottom: 30px;
+
+      &:before {
+        left: calc(10% - 0%);
+        width: calc(100% - 20%);
+      }
+
+      ul {
+        li {
+          &:last-child {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-md) {
+    h1 {
+      width: 1031px;
+      max-width: 90%;
+      @include font-size(4.0, 5.6);
+      padding: 190px 0 calc(140px + 7vw);
+    }
+
+    .client-solutions {
+      h5 {
+        display: block;
+      }
+
+      ul {
+        flex: 0 0 50%;
+
+        li {
+          margin: 0 0 0 50px;
+        }
+      }
+    }
+  }
+
+  @media (min-width: $screen-lg) {
+    h1 {
+      @include font-size(4.4, 6.0);
+      padding: 210px 0 calc(160px + 7vw);
+    }
+
+    .client-solutions {
+      &:before {
+        left: calc(11% - 0%);
+        width: calc(100% - 22%);
+      }
+    }
+  }
+
+  @media (min-width: $screen-xl) {
+    h1 {
+      @include font-size(4.8, 6.4);
+    }
+
+    .client-solutions {
+      &:before {
+        @include centre(x);
+        max-width: 1400px;
+      }
+    }
+  }
+}
